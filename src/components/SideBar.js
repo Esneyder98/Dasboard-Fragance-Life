@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/logoFraganceLife.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
@@ -12,13 +12,13 @@ function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"  id="accordionSidebar">
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <Link className="sidebar-brand d-flex align-items-center justify-content-center"
                 to="/">
                    <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="Digital House"/>
+                        <img className="w-100" height={65} width={60} src={image} alt="Digital House"/>
                     </div> 
                 </Link>
                 
@@ -30,7 +30,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                     <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span> 
+                        <span>Dashboard - Fragance Life</span> 
                     </Link>
                 </li>
 
@@ -44,23 +44,16 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link collapsed" to="/LastMovieInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Productos</span>
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/GenresInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Genres</span>
-                    </Link>
-                </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/table">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span>
+                        <span>Tablas</span>
                     </Link>
                 </li>
 
