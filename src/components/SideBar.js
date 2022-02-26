@@ -1,7 +1,8 @@
 import React from 'react';
 import image from '../assets/images/logoFraganceLife.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
+import LastFraganceInDb from './LastFraganceInDb';
+import FraganceInDb from './FraganceInDb/FraganceInDb';
 import ProductsList from './ProductsList';
 import UsersList from './UsersList';
 import ContentRowMovies from './ContentRowMovies';
@@ -43,6 +44,18 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
+                    <Link className="nav-link collapsed" to="/LastFraganceInDb">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Last FraganceInDb</span>
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link collapsed" to="/FraganceInDb">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Marcas</span>
+                    </Link>
+                </li>
+                <li className="nav-item">
                     <Link className="nav-link collapsed" to="/ProductsList">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Productos</span>
@@ -69,10 +82,11 @@ function SideBar(){
             {/*<!-- End of Sidebar -->*/}
             <Routes>
                 <Route path="/" element={<ContentWrapper />}/>
-                <Route path="/GenresInDb" element={<GenresInDb/>} />
+                <Route path="/LastFraganceInDb" element={<LastFraganceInDb/>} />
                 <Route path="/ProductsList" element={<ProductsList />}/>
                 <Route path="/UsuariosList" element={<UsersList />}/>
                 <Route path="/ContentRowMovies" element={<ContentRowMovies/>}/>
+                <Route path="/FraganceInDb" element={<FraganceInDb/>}/>
                 <Route path="/table" element={<Chart/>}/>
 				<Route path="*" element={<Error/>}/>
             </Routes> 

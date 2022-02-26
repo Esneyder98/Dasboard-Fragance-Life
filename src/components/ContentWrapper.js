@@ -1,7 +1,7 @@
 import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
-import ProductsList from './ProductsList';
+//import ProductsList from './ProductsList';
 import Footer from './Footer';
 function ContentWrapper(){
     return (
