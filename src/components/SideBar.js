@@ -2,7 +2,8 @@ import React from 'react';
 import image from '../assets/images/logoFraganceLife.png';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
-import LastMovieInDb from './LastMovieInDb';
+import ProductsList from './ProductsList';
+import UsersList from './UsersList';
 import ContentRowMovies from './ContentRowMovies';
 import Chart from './Chart';
 import Error from './Error';
@@ -18,7 +19,7 @@ function SideBar(){
                 <Link className="sidebar-brand d-flex align-items-center justify-content-center"
                 to="/">
                    <div className="sidebar-brand-icon">
-                        <img className="w-100" height={65} width={60} src={image} alt="Digital House"/>
+                        <img className="w-100" height={65} src={image} alt="Fragance Life"/>
                     </div> 
                 </Link>
                 
@@ -42,13 +43,18 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <Link className="nav-link collapsed" to="/LastMovieInDb">
+                    <Link className="nav-link collapsed" to="/ProductsList">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Productos</span>
                     </Link>
                 </li>
 
-
+                <li className="nav-item">
+                    <Link className="nav-link collapsed" to="/UsuariosList">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <span>Usuarios</span>
+                    </Link>
+                </li>
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/table">
@@ -64,7 +70,8 @@ function SideBar(){
             <Routes>
                 <Route path="/" element={<ContentWrapper />}/>
                 <Route path="/GenresInDb" element={<GenresInDb/>} />
-                <Route path="/LastMovieInDb" element={<LastMovieInDb />}/>
+                <Route path="/ProductsList" element={<ProductsList />}/>
+                <Route path="/UsuariosList" element={<UsersList />}/>
                 <Route path="/ContentRowMovies" element={<ContentRowMovies/>}/>
                 <Route path="/table" element={<Chart/>}/>
 				<Route path="*" element={<Error/>}/>
