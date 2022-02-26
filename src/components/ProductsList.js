@@ -41,7 +41,7 @@ function ProductsList () {
                    Precio : $ {product.price}  </p>
                   
                   <p>{product.description}</p>
-                  <img src={product.image} alt="avatar" width="150" />
+                  <img src={product.images_products[0]} alt="avatar" width="150" />
                 </li>
               );
             })}
