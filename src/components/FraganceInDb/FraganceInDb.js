@@ -44,7 +44,7 @@ function LastMovieInDb() {
               <div key={i} className="row brand">
                 <div className="col-lg-6 mb-4">
                   <div className="card bg-dark text-white shadow">
-                    <div className="card-body">{element}:{brands[1][count-1]}</div>
+                    <div className="card-body">{element}: {brands[1][count-1]}</div>
                   </div>
                 </div>
               </div>

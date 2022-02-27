@@ -1,50 +1,54 @@
-import React from 'react';
-import SmallCard from './SmallCard';
+import React from "react";
+import {useState, useEffect} from "react"
 
-/*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
 
-let moviesInDB = {
-    title: 'Movies in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
+function ContentRowMovies() {
+  let [products, setProducts] = useState([]);
 
-/* <!-- Total awards --> */
+  useEffect(() => {
+    console.log("%cse montó el componente", "color:green");
 
-let totalAwards = {
-    title:' Total awards', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
-}
+    fetch("https://fragance--life.herokuapp.com/api/products/")
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data.meta);
+      })
+      .catch((error) => console.log(error));
+  }, []);
 
-/* <!-- Actors quantity --> */
+  useEffect(() => {
+    console.log("%cse actualizó el componente", "color:yellow");
+  }, [products]);
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
-}
+  useEffect(() => {
+    return () => {
+      console.log("%cse desmontó el componente", "color:red");
+    };
+  }, []);
 
-let cartProps = [moviesInDB, totalAwards, actorsQuantity];
+  
 
-function ContentRowMovies(){
+  
     return (
-    
-        <div className="row">
-            
-            {cartProps.map( (movie, i) => {
-
-                return <SmallCard {...movie} key={i}/>
-            
-            })}
-
+      <div className="row">
+        <div className="col-md-4 mb-4">
+            <div className="card border-left-'primary' shadow h-100 py-2">
+                <div className="card-body">
+                    <div className="row no-gutters align-items-center">
+                        <div className="col mr-2">
+                            <div className="text-xs font-weight-bold text-'primary' text-uppercase mb-1">hola</div>
+                            <div className="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        </div>
+                        <div className="col-auto">
+                            <i className="fas 'fa-clipboard-list' fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    )
+      </div>
+    );
+  
 }
-
 export default ContentRowMovies;

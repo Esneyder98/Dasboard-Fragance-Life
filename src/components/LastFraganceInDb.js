@@ -32,7 +32,7 @@ function LastMovieInDb(){
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={products.images_products[0]} alt=" Star Wars - Mandalorian "/>
                     </div>
                     <p>{products.description}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                   
                 </div>
             </div>
             }
