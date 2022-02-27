@@ -1,81 +1,62 @@
-import React from 'react';
-import ChartRow from './ChartRow';
-import {useState, useEffect} from "react"
+import React from "react";
+import ChartRow from "./ChartRow";
+import { useState, useEffect } from "react";
 
-// let tableRowsData = [
-//     {
-//         Title: 'Billy Elliot ',
-//         Length: '123',
-//         Rating: '5',
-//         Categories: ['Drama','Comedia'],
-//         Awards: 2
-//     },
-//     {
-//         Title: 'Alicia en el país de las maravillas',
-//         Length: '142',
-//         Rating: '4.8',
-//         Categories: ['Drama','Acción','Comedia'],
-//         Awards: 3
-//     },
-    
-// ]
+function Chart() {
+  let [products, setProducts] = useState([]);
 
-
-function Chart (){
-    let [products, setProducts] = useState([]);
-   
-    useEffect(()=>{
+  useEffect(() => {
     console.log("%cse montó el componente", "color:green");
 
     fetch("https://fragance--life.herokuapp.com/api/products/")
-      .then((response) => 
-      response.json())
+      .then((response) => response.json())
       .then((data) => {
-        setProducts(data.data)
+        setProducts(data.data);
       })
       .catch((error) => console.log(error));
-    },[])
+  }, []);
 
-    useEffect(()=>{
-        console.log("%cse actualizó el componente", "color:yellow");
-    },[products])
+  useEffect(() => {
+    console.log("%cse actualizó el componente", "color:yellow");
+  }, [products]);
 
-    useEffect(()=>{
-        return()=>{
-            console.log("%cse desmontó el componente", "color:red");
-        }
-    },[])
+  useEffect(() => {
+    return () => {
+      console.log("%cse desmontó el componente", "color:red");
+    };
+  }, []);
 
-    return (
-        /* <!-- DataTales Example --> */
-        <div className="card shadow mb-4">
-            <div className="card-body">
-                <div className="table-responsive">
-                    <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
-                        <thead>
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Marca</th>
-                                <th>Género</th>
-                                <th>Descripción</th>
-                                <th>Disponibles</th>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                            {
-                            products.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
-                            })
-                            }
+  return (
+    /* <!-- DataTales Example --> */
+    <div className="card shadow mb-4">
+      <div className="card-body">
+        <div className="table-responsive">
+          <table
+            className="table table-bordered"
+            id="dataTable"
+            width="85%"
+            cellSpacing="0"
+          >
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Marca</th>
+                <th>Género</th>
+                <th>Descripción</th>
+                <th>Disponibles</th>
+              </tr>
+            </thead>
 
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            <tbody>
+              {products.map((row, i) => {
+                return <ChartRow {...row} key={i} />;
+              })}
+            </tbody>
+          </table>
         </div>
-
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Chart;

@@ -1,8 +1,7 @@
-import React from 'react';
+import React from "react";
 import { useState, useEffect } from "react";
 import TopBar from "./TopBar";
 import { Link } from "react-router-dom";
-
 
 function ProductsList() {
   let [products, setProducts] = useState([]);
@@ -58,7 +57,6 @@ function ProductsList() {
             );
           })}
         </ul>
-        
       </div>
     </React.Fragment>
   );

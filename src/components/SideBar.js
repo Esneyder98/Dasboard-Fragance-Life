@@ -6,7 +6,7 @@ import FraganceInDb from "./FraganceInDb/FraganceInDb";
 import ProductsList from "./ProductsList";
 import UsersList from "./UsersList";
 import ContentRowMovies from "./ContentRowMovies";
-import ProductDetail from "./ProductDetail"
+import ProductDetail from "./ProductDetail";
 import Chart from "./Chart";
 import Error from "./Error";
 import { Link, Routes, Route } from "react-router-dom";
