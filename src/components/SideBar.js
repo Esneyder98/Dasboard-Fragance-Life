@@ -2,7 +2,7 @@ import React from "react";
 import image from "../assets/images/logoFraganceLife.png";
 import ContentWrapper from "./ContentWrapper";
 import LastFraganceInDb from "./LastFraganceInDb";
-import FraganceInDb from "./FraganceInDb/FraganceInDb";
+import GenresInDb from "./GenresInDb/GenresInDb";
 import ProductsList from "./ProductsList";
 import UsersList from "./UsersList";
 import ContentRowMovies from "./ContentRowMovies";
@@ -59,7 +59,7 @@ function SideBar(props) {
           </Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link collapsed" to="/FraganceInDb">
+          <Link className="nav-link collapsed" to="/GenresInDb">
             <i className="fas fa-fw fa-folder"></i>
             <span>Marcas</span>
           </Link>
@@ -96,7 +96,7 @@ function SideBar(props) {
         <Route path="/ProductsList/:id" element={<ProductDetail />} />
         <Route path="/UsuariosList" element={<UsersList />} />
         <Route path="/ContentRowMovies" element={<ContentRowMovies />} />
-        <Route path="/FraganceInDb" element={<FraganceInDb />} />
+        <Route path="/GenresInDb" element={<GenresInDb />} />
         <Route path="/table" element={<Chart />} />
         <Route path="*" element={<Error />} />
       </Routes>

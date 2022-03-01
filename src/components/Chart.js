@@ -6,7 +6,7 @@ function Chart() {
   let [products, setProducts] = useState([]);
 
   useEffect(() => {
-    console.log("%cse montó el componente", "color:green");
+    // console.log("%cse montó el componente", "color:green");
 
     fetch("https://fragance--life.herokuapp.com/api/products/")
       .then((response) => response.json())
@@ -17,12 +17,12 @@ function Chart() {
   }, []);
 
   useEffect(() => {
-    console.log("%cse actualizó el componente", "color:yellow");
+    // console.log("%cse actualizó el componente", "color:yellow");
   }, [products]);
 
   useEffect(() => {
     return () => {
-      console.log("%cse desmontó el componente", "color:red");
+      // console.log("%cse desmontó el componente", "color:red");
     };
   }, []);
 

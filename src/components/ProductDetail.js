@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 function ProductDetail(props) {
   let [products, setProducts] = useState([]);
   let { id } = useParams();
-  console.log(id);
+  // console.log(id);
   useEffect(() => {
-    console.log("%cse montó el componente", "color:green");
+    // console.log("%cse montó el componente", "color:green");
 
     fetch(`https://fragance--life.herokuapp.com/api/products/${id}`)
       //fetch(`http://localhost:3000/api/products/${id}`)
@@ -19,12 +19,12 @@ function ProductDetail(props) {
   }, []);
 
   useEffect(() => {
-    console.log("%cse actualizó el componente", "color:yellow");
+    // console.log("%cse actualizó el componente", "color:yellow");
   }, [products]);
 
   useEffect(() => {
     return () => {
-      console.log("%cse desmontó el componente", "color:red");
+      // console.log("%cse desmontó el componente", "color:red");
     };
   }, []);
 

@@ -1,0 +1,21 @@
+
+.container-brand{
+    display:flex;
+    flex-wrap: wrap;
+    padding:2%;
+    height:97%;
+}
+.brand{
+    flex: auto;
+    width: 40%;
+    margin:0px 0px 0px 0px;
+    border:1px solid #36b9cc;
+    border-radius:6px;
+    padding:10px;
+    margin: 2%;
+    background-color:#36b9cc;
+}
+.brand-3{
+    display: flex;
+    
+}

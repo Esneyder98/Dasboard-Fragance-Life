@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 function LastMovieInDb() {
   let [products, setProducts] = useState([]);
   useEffect(() => {
-    console.log("%cse montó el componente", "color:green");
+    // console.log("%cse montó el componente", "color:green");
 
     fetch("https://fragance--life.herokuapp.com/api/products/")
       .then((response) => response.json())
@@ -14,7 +14,7 @@ function LastMovieInDb() {
       .catch((error) => console.log(error));
   }, []);
   useEffect(() => {
-    console.log("%cse actualizó el componente", "color:yellow");
+    // console.log("%cse actualizó el componente", "color:yellow");
   }, [products]);
   return (
     <div className="col-lg-6 mb-4">

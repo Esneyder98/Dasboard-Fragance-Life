@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import './GenresinDb.css'
+import './GenresInDb.css'
 function LastMovieInDb() {
   let [products, setProducts] = useState([]);
   let [brands,setBrands] = useState([]);
@@ -36,15 +36,15 @@ function LastMovieInDb() {
             Marcas de Perfumes
           </h5>
         </div>
-        <div className="card-body brands-container">
+        <div className="container-brand">
           {brands.length >0 ?
           brands[0].map((element,i) => {
             count+=1
             return (
-              <div key={i} className="row brand">
-                <div className="col-lg-6 mb-4">
-                  <div className="card bg-info text-white shadow">
-                    <div className="card-body">{element}: {brands[1][count-1]}</div>
+              <div key={i} className="brand">
+                <div className="brand-1">
+                  <div className="brand-2">
+                    <div className="brand-3">{element}: {brands[1][count-1]}</div>
                   </div>
                 </div>
               </div>

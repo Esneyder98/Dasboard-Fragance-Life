@@ -7,7 +7,7 @@ function ContentRowMovies() {
   let [brands,setBrands] = useState([]);
 
   useEffect(() => {
-    console.log("%cse montó el componente", "color:green");
+    // console.log("%cse montó el componente", "color:green");
 
     fetch("https://fragance--life.herokuapp.com/api/products/")
       .then((response) => response.json())
@@ -21,7 +21,7 @@ function ContentRowMovies() {
   }, []);
 
   useEffect(() => {
-    console.log("%cse actualizó el componente", "color:yellow");
+    // console.log("%cse actualizó el componente", "color:yellow");
   }, [products]);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ function ContentRowMovies() {
   let [users, setUsers] = useState([]);
 
   useEffect(() => {
-    console.log("%cse montó el componente", "color:green");
+    // console.log("%cse montó el componente", "color:green");
 
     fetch("https://fragance--life.herokuapp.com/api/users/")
       .then((response) => response.json())
@@ -45,12 +45,12 @@ function ContentRowMovies() {
   }, []);
 
   useEffect(() => {
-    console.log("%cse actualizó el componente", "color:yellow");
+    // console.log("%cse actualizó el componente", "color:yellow");
   }, [users]);
 
   useEffect(() => {
     return () => {
-      console.log("%cse desmontó el componente", "color:red");
+      // console.log("%cse desmontó el componente", "color:red");
     };
   }, []);
 
