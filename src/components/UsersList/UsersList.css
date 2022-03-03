@@ -1,0 +1,37 @@
+.userlist{
+   padding:10px; 
+   display:flex;
+   flex-direction:column;
+   width: 100%;
+   align-items: center;
+   background-color: #4e73df;
+   color: #fff;
+}
+.container-user{
+    padding: 0px;
+    width: 100%;
+    
+}
+.datessuser{
+ list-style:none;
+ display: flex;
+ padding: 24px;
+ margin-bottom: 10px;
+ border-radius: 10px;
+ box-shadow: 0px 0px 5px 0px #fff;
+ align-items: center;
+ width: 100%;
+}
+
+
+.div-image{
+    padding: 10px;
+}
+.avatar{
+    border: salmon 4px solid;
+    border-radius:50%;
+    
+}
+.date{
+    padding: 1% 4%;
+}

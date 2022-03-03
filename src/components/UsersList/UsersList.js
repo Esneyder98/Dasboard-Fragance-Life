@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import './UsersList.css'
 function UsersList() {
   let [users, setUsers] = useState([]);
 
@@ -25,15 +25,22 @@ function UsersList() {
   }, []);
 
   return (
-    <div className="col-lg-6 mb-4">
+    <div className="userlist">
       <h2>Estos son Usuarios en la Base de Datos</h2>
-      <ul>
+      <ul className="container-user">
         {users.length === 0 && <p>Cargando...</p>}
         {users.map((user, i) => {
           return (
-            <li key={i}>
-              <h3>{user.name}</h3>
-              <img src={user.avatar} alt="avatar" width={100} height={100} />
+            <li className="datessuser" key={i}>
+              <div className="div-image">
+              <img className="avatar" src={user.avatar} alt="avatar" width={100} height={100} />
+              </div>
+              
+              <div className="date">
+                <p>{user.name} {user.surname}</p>
+                <p>{user.email}</p>
+              </div>
+              
             </li>
           );
         })}

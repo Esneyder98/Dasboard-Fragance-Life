@@ -4,7 +4,7 @@ import ContentWrapper from "./ContentWrapper";
 import LastFraganceInDb from "./LastFraganceInDb";
 import GenresInDb from "./GenresInDb/GenresInDb";
 import ProductsList from "./ProductsList";
-import UsersList from "./UsersList";
+import UsersList from "./UsersList/UsersList";
 import ContentRowMovies from "./ContentRowMovies";
 import ProductDetail from "./ProductDetail";
 import Chart from "./Chart";
