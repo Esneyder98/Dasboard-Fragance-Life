@@ -34,7 +34,7 @@ function LastMovieInDb() {
                 className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                 id= "last-france"
                 src={products.images_products[0]}
-                alt=" Star Wars - Mandalorian "
+                alt=" image "
               />
             </div>
             <p>{products.description}</p>
