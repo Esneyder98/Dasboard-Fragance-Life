@@ -1,5 +1,5 @@
 import React from "react";
-import LastFraganceInDb from "./LastFraganceInDb";
+import LastFraganceInDb from "./LastFraganceInDb/LastFraganceInDb";
 import GenresInDb from "./GenresInDb/GenresInDb";
 function ContentRowCenter() {
   return (
